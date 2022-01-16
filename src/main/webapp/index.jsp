@@ -51,15 +51,32 @@ return n*n*n;
 
 <!-- Fim da Declaration -->
 <!-- Utilizando o Scriptlet para calculo de volume -->
-<%!
-double volume(double raio , double altura ){  
-	double volume;
-	volume = raio * raio * altura;
-	return volume; 
+<%
+
+	float nota1 = 4;
+	float nota2 = 8;
+	float resultado1 ;
+	resultado1 = nota1 + nota2 / 2;
+	out.println("");
+	
+	out.println("Aluno 1 Notas 1 :"+ nota1 +" . Nota2 : "+ nota2+ "\n");
+	out.println("");
+	
+	if ( resultado1 < 5 ){
+		out.println("Reprovado");
+	} else {
+		out.println("Aprovado ");
+	}
+	%>	<br>
+<%	
+	out.println("");
+	out.println(" \n Contagem Do Numero 1 ao 10 :");
+	int i = 1;
+for ( i=1 ; i< 10; i++){
+	out.println("<br>" + i);
 }
 %>
-	<%= "O calculo do volume 1 eh igual a:"+volume(3.7 , 5.0) %> <br> 
-	<%= "O calculo do volume 2 eh igual a:"+volume(3.9 , 7.0) %> <br> 
+
 <!-- Fim do Scriptlet -->
 <!-- Fim do Código 2 -->
 <!-- Inicio da Parte 3 -->
@@ -75,9 +92,9 @@ double volume(double raio , double altura ){
 		
 
 		<%if(segundos() % 2 == 0){
-			out.println(segundos() + "Numero Par");
+			out.println("Numero Par"+segundos());
 		}else{
-			out.println(segundos()+"Numero Impar");
+			out.println("Numero Impar"+segundos());
 		}%>
 
 		
