@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page language="java" import="java.util.*" %>
+<%@ page language="java" import="java.util.Calendar"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,5 +61,33 @@ double volume(double raio , double altura ){
 	<%= "O calculo do volume 1 eh igual a:"+volume(3.7 , 5.0) %> <br> 
 	<%= "O calculo do volume 2 eh igual a:"+volume(3.9 , 7.0) %> <br> 
 <!-- Fim do Scriptlet -->
+<!-- Fim do Código 2 -->
+<!-- Inicio da Parte 3 -->
+
+
+<br>
+<!-- Parte 4 -->
+		<%! Calendar cal = Calendar.getInstance();%>
+		
+		<%!int segundos(){
+			return cal.get(Calendar.SECOND);
+		}%>
+		
+
+		<%if(segundos() % 2 == 0){
+			out.println(segundos() + "Numero Par");
+		}else{
+			out.println(segundos()+"Numero Impar");
+		}%>
+
+		
+	
+	
+		
+
+	
+
+
+
 </body>
 </html>
